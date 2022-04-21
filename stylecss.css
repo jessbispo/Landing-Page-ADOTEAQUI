@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #f0dfc8;
+    background: #fdfffc;
     background-size: 200vh 120vw;
     font-size: 100%;
     
@@ -17,9 +17,11 @@ body {
     justify-content: center;
     flex-direction: row;
     padding: 12px;
+    background: #c1292e;
 }
 
 .logo {
+    padding: 0px;
     display: flex;
     align-self: flex-start;
     height: 60px;
@@ -41,7 +43,7 @@ body {
 
 
 .opcao:hover {
-    color: #ebbd7d;
+    color: #d4dccd;
 }
 
 .botao {
@@ -59,6 +61,7 @@ main {
     padding: 40px;
     height: 80vh;
 }
+
 .principal {
     border-top: 0.4px solid white;
     border-bottom: 0.4px solid white;
@@ -75,17 +78,106 @@ main {
 .h1 {
     font-size: 80px;
     font-family: 'Oswald', sans-serif;
-    color: #6F1A07;
+    color: #161925;
     padding: 5px 30px;
 }
 
 
 .p {
     font-size: 20px;
-    color: black;
+    color: #5d5746;
     font-family: 'Teko', sans-serif;
     padding: 20px 30px;
 }
+
+/* From uiverse.io */
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 20rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #c1292e;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem 0;
+    margin: 0 0 0 1.2rem;
+    color: #161925;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
 
 .gatos {
     width: 25vw;
@@ -117,12 +209,70 @@ main {
 
  @media screen and (max-width: 300px) {
         .opcoes {
-            flex-direction: column;   
+            padding: 20px 0px;
+            margin: 0px;
+            flex-direction: column; 
+            justify-content: space-between;  
+            gap: 20px;
         }  
         .logo {
             display: none;
         }
+        .botao {
+            width: 25vw;
+        }
+        .h1 {
+            font-size: 40px;
+            padding: 0px 0px;
+            margin: px;
+            justify-content: flex-start;
+        }
+        .p {
+            font-size: 15px;
+            padding: 30px 0px;
+            margin: 0px;
+        }
+        .imagens {
+            flex-direction: column;
+            position: absolute;
+            margin-top: 320px;
+        }
 
+        main {
+            height: 140vh;
+            border-top: 0.3px solid white;
+            border-bottom: 0.3px solid white;
+        }
+        .gatos {
+            padding: 20px 0px;
+            margin: 10px;
+            width: 150px;
+            height: 100px;
+            /*position: absolute;
+            top: 300px;*/
+            
+        }
+        .imagem {
+            width: 150px;
+            height: 200px;
+            padding: 20px 0px;
+            margin: 10px;
+            /*position: absolute;
+            border-bottom: 20px; */
+        }
+        .rodape {
+            padding: 15px;
+            font-size: 13px;
+        }
+        .learn-more {
+            position: absolute;
+            margin-top: -40px;
+            padding: 20px 0px;
+        }
+        button.learn-more {
+            width: 12rem;
+            height: auto;
+           }
     }
         
     
